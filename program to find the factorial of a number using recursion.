@@ -1,0 +1,25 @@
+//program to find the factorial of a number using recursion.
+#include <stdio.h>
+#include<conio.h>
+long int fact (int n);
+void
+main ()
+{
+  int n;
+  long res;
+  printf ("\nenter a no.:");
+  scanf ("%d", &n);
+  res = fact (n);
+  printf ("\nfactorial of %d = %ld", n, res);
+  getch ();
+}
+
+long int
+fact (int n)
+{
+  if (n == 1)
+    return 1;
+  else
+    return n * fact (n - 1);
+
+}
